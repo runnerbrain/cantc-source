@@ -1,5 +1,5 @@
 <?php
-
+//Do you see this.
 $t_arr = ['T1','T2','T3','T4'];
 $n1 = 'N1a,N1b';
 $n0x = 'N0,Nx';
@@ -10,7 +10,6 @@ $epdemo = ['M1','F1','M2','F2','M3','F3','M4','F4','M5','F5','M6','F6','total'];
 $years = ['2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010'];
 $sites = ['London','Halifax','Winnipeg','Toronto','Newfoundland','Hamilton','Fredericton'];
 
-//$sites = array('lhsc'=>'London','ha'=>'Halifax','winn'=>'Winnipeg','tor'=>'Toronto','nf'=>'Newfoundland');
 $dose_range = array('D1.1'=>'1.1','D1.8'=>'1.8','D3.7'=>'3.7','D5.5'=>'5.5','D7.4+'=>'7.4');
 
 function create_table($tbl,$rows_,$first_col_name,$conn)
@@ -18,7 +17,6 @@ function create_table($tbl,$rows_,$first_col_name,$conn)
     global $years,$sites;
     
     $columns = getColNames($tbl,$conn);
-    //$columns = $columns_row[0];
     echo "Create table --".$columns."\n";
 
     $sql = "CREATE TABLE $tbl ($columns)"; 
@@ -163,7 +161,7 @@ function getTValue($colvalue)
             break;
         case "T1_n1ab_r":
             $tn_val[0] = 'T1';
-            $tn_val[1] = 'N1a,N1a';
+            $tn_val[1] = 'N1a,N1b';
             $tn_val[2] = 'rhtsh';
         break;
         case "T1_n1ab_w":
